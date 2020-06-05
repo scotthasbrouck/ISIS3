@@ -21,10 +21,7 @@ namespace Isis {
     p_bluStretch = NULL;
     p_enabled = false;
 
-    setWindowTitle("Advanced Stretch Tool");
-
     QHBoxLayout *layout = new QHBoxLayout();
-    
     setLayout(layout);
   }
 
@@ -127,22 +124,6 @@ namespace Isis {
 
     connect(p_grayStretch, SIGNAL(stretchChanged()),
             this, SIGNAL(stretchChanged()));
-    connect(p_grayStretch, SIGNAL(saveToCube()),
-            this, SIGNAL(saveToCube()));
-    connect(p_grayStretch, SIGNAL(deleteFromCube()),
-            this, SIGNAL(deleteFromCube()));
-    connect(p_grayStretch, SIGNAL(loadStretch()),
-            this, SIGNAL(loadStretch()));
-  }
-
-
-  /**
-   * Restores a saved stretch from the cube 
-   *  
-   * @param stretch 
-   */
-  void AdvancedStretchDialog::restoreSavedStretch(Stretch stretch){
-    p_grayStretch->restoreSavedStretch(stretch);
   }
 
 
@@ -232,7 +213,7 @@ namespace Isis {
 
 
   /**
-   * This calls setHistogram on the gray advanced stretches. This
+   * This calls setHistogram on the gray advanced stretche. This
    * should be called every time the visible area changes.
    *
    * @param grayHist Histogram of visible area on gray band

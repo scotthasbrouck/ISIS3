@@ -171,9 +171,6 @@ namespace Isis {
 
     protected slots:
       void mouseButtonRelease(QPoint p, Qt::MouseButton s);
-      void saveStretchToCube();
-      void deleteFromCube();
-      void loadStretchFromCube(); 
       void enableRubberBandTool();
       void screenPixelsChanged();
       void updateHistograms();
